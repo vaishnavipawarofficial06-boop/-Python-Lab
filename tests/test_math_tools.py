@@ -13,7 +13,10 @@ def test_celsius_to_fahrenheit(celsius: float, expected: float) -> None:
     assert celsius_to_fahrenheit(celsius) == pytest.approx(expected)
 
 
-@pytest.mark.parametrize(("number", "expected"), [(2, True), (3, False), (0, True), (-4, True)])
+@pytest.mark.parametrize(
+    ("number", "expected"),
+    [(2, True), (3, False), (0, True), (-4, True)],
+)
 def test_is_even(number: int, expected: bool) -> None:
     assert is_even(number) is expected
 

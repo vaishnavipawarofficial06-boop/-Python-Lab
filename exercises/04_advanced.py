@@ -21,6 +21,7 @@ def chunked(items: list[R], size: int) -> Iterator[list[R]]:
 
 def timed(func: Callable[P, R]) -> Callable[P, R]:
     """Decorator that prints elapsed time while preserving metadata."""
+
     @functools.wraps(func)
     def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
         start = time.perf_counter()
